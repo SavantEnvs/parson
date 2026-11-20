@@ -1,0 +1,11 @@
+project: savantenvs/parson
+target: fuzz_object_ops
+
+cmds:
+  - cmd: /mayhem/fuzz_object_ops
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_object_ops/testsuite
